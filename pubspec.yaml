@@ -34,8 +34,14 @@ flutter:
    - assets/backgrounds/intro2.jpg
    - assets/image/location.png  
    - assets/image/loupe.png
+   - assets/image/star.png
+   - assets/image/brunch.png
+   - assets/image/wifi.png
+   - assets/image/pool.png
+   - assets/image/bathtub.png
    - assets/Popular/1.jpg
    - assets/Popular/2.jpg
    - assets/Popular/3.jpg
+
 
 

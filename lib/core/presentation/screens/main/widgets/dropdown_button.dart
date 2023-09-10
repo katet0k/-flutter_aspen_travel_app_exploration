@@ -24,9 +24,8 @@ class _DropDownMenuState extends State<DropDownMenu> {
                   value: item,
                   child: Text(
                     item,
-                    style: GoogleFonts.roboto(
-                        fontSize: 14,
-                        color: const Color.fromARGB(255, 31, 165, 255)),
+                    style:
+                        GoogleFonts.roboto(fontSize: 14, color: Colors.black),
                   ),
                 ))
             .toList(),

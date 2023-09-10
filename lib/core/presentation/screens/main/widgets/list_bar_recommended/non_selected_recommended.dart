@@ -15,16 +15,15 @@ class NonSelectedItem1 extends StatelessWidget {
               BorderRadius.circular(16.0), // Здесь задайте радиус скругления
         ),
         child: SizedBox(
-            width: MediaQuery.of(context).size.width - 200,
-            height: MediaQuery.of(context).size.height - 30,
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            width: 210,
+            height: 220,
+            child: Stack(children: [
               Align(
                 alignment: Alignment.topCenter,
                 child: Padding(
-                    padding: const EdgeInsets.fromLTRB(1, 0, 1, 30),
+                    padding: const EdgeInsets.fromLTRB(1, 0, 1, 110),
                     child: ClipRRect(
-                      borderRadius: const BorderRadius.all(Radius.circular(12)),
+                      borderRadius: const BorderRadius.all(Radius.circular(13)),
                       child: Image.network(
                         imageUrl,
                         width: 200,
@@ -33,6 +32,32 @@ class NonSelectedItem1 extends StatelessWidget {
                       ),
                     )),
               ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 10, 20),
+                  child: Card(
+                    color: const Color(0xFF3A544F),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16.0),
+                      side: const BorderSide(color: Colors.white, width: 3),
+                    ),
+                    child: const SizedBox(
+                        width: 50,
+                        height: 25,
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            '4N/5D',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.white,
+                            ),
+                          ),
+                        )),
+                  ),
+                ),
+              )
             ])));
   }
 }
