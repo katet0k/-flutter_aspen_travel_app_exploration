@@ -7,6 +7,7 @@ class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 0,
       color: const Color(0xFFF3F8FE),
       shape: RoundedRectangleBorder(
         borderRadius:

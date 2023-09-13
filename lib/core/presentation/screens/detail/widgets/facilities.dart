@@ -10,6 +10,7 @@ class FacilitiesCard extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
         child: Card(
+            elevation: 0,
             color: const Color.fromARGB(255, 236, 240, 247),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
@@ -46,6 +47,7 @@ class FacilitiesCard extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
         child: Card(
+            elevation: 0,
             color: const Color.fromARGB(255, 236, 240, 247),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
@@ -82,6 +84,7 @@ class FacilitiesCard extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
         child: Card(
+            elevation: 0,
             color: const Color.fromARGB(255, 236, 240, 247),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
@@ -118,6 +121,7 @@ class FacilitiesCard extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
         child: Card(
+            elevation: 0,
             color: const Color.fromARGB(255, 236, 240, 247),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(

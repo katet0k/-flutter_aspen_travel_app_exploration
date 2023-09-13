@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_my_information/core/presentation/screens/main/widgets/Nav.dart';
 import 'package:flutter_my_information/core/presentation/screens/main/widgets/dropdown_button.dart';
 import 'package:flutter_my_information/core/presentation/screens/main/widgets/list_bar_category/list_bar.dart';
 import 'package:flutter_my_information/core/presentation/screens/main/widgets/list_bar_popular/list_bar_popular.dart';
@@ -12,6 +13,18 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: const BottomAppBar(
+        child: SizedBox(
+          height: 80,
+          child: ClipRRect(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(50),
+              topRight: Radius.circular(50),
+            ),
+            child: Nav(),
+          ),
+        ),
+      ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Stack(

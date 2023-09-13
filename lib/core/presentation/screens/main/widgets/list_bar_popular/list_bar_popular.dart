@@ -38,7 +38,7 @@ class _ListBarState extends State<ListBarPopular> {
     '(365 reviews)'
   ];
 
-  final List<String> priceUrls = ['100', '200', '300'];
+  final List<String> priceUrls = ['\$ 100', '\$ 200', '\$ 300'];
 
   var selectedValue = 'Location';
 
@@ -52,106 +52,38 @@ class _ListBarState extends State<ListBarPopular> {
               children: [
                 for (var index = 0; index < imageUrls.length; index++)
                   (selectedValue == imageUrls[index])
-                      ? NonSelectedImage(imageUrl: imageUrls[index])
+                      ? NonSelectedImage(
+                          imageUrl: imageUrls[index],
+                          textUrl: textUrls[index],
+                          ratingUrl: ratingUrls[index],
+                          textinfoUrl: textinfoUrls[index],
+                          pricefoUrl: priceUrls[index],
+                          reviewsUrl: reviewsUrls[index],
+                        )
                       : InkWell(
                           borderRadius:
                               const BorderRadius.all(Radius.circular(33)),
-                          hoverColor: const Color.fromARGB(255, 238, 243, 255),
+                          hoverColor: const Color.fromARGB(255, 255, 255, 255),
                           onTap: () {
                             var controller = Get.find<UrlController>();
                             controller.setImgUrl(
-                                imageUrls[index],
-                                textUrls[index],
-                                ratingUrls[index],
-                                textinfoUrls[index],
-                                priceUrls[index],
-                                reviewsUrls[index]);
+                              imageUrls[index],
+                              textUrls[index],
+                              ratingUrls[index],
+                              textinfoUrls[index],
+                              priceUrls[index],
+                              reviewsUrls[index],
+                            );
                             Get.toNamed('/detail', arguments: textUrls[index]);
                           },
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Stack(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(33)),
-                                  child: Image.asset(
-                                    imageUrls[index],
-                                    width: 220,
-                                    height: 260,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        10, 170, 0, 20),
-                                    child: Card(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                        color: const Color(0xFF4D5652),
-                                        child: SizedBox(
-                                          height: 35,
-                                          width: 120,
-                                          child: Row(children: [
-                                            Align(
-                                              alignment: Alignment.center,
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        12, 10, 0, 10),
-                                                child: Text(textUrls[index],
-                                                    style: const TextStyle(
-                                                      fontSize: 12,
-                                                      color: Colors.white,
-                                                    )),
-                                              ),
-                                            ),
-                                          ]),
-                                        ))),
-                                Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        10, 210, 0, 20),
-                                    child: Card(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                        ),
-                                        color: const Color(0xFF4D5652),
-                                        child: SizedBox(
-                                          height: 35,
-                                          width: 80,
-                                          child: Row(children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.fromLTRB(
-                                                      10, 0, 10, 0),
-                                              child: Image.asset(
-                                                'assets/image/star.png',
-                                                width: 15,
-                                                height: 15,
-                                              ),
-                                            ),
-                                            Align(
-                                              alignment: Alignment.center,
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        0, 10, 0, 10),
-                                                child: Text(ratingUrls[index],
-                                                    style: const TextStyle(
-                                                      fontSize: 12,
-                                                      color: Colors.white,
-                                                    )),
-                                              ),
-                                            ),
-                                          ]),
-                                        ))),
-                              ],
-                            ),
-                          ),
-                        )
+                          child: NonSelectedImage(
+                            imageUrl: imageUrls[index],
+                            textUrl: textUrls[index],
+                            ratingUrl: ratingUrls[index],
+                            textinfoUrl: textinfoUrls[index],
+                            pricefoUrl: priceUrls[index],
+                            reviewsUrl: reviewsUrls[index],
+                          ))
               ],
             ));
       },
