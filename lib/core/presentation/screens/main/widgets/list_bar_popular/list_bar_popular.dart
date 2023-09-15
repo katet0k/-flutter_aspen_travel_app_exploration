@@ -13,9 +13,9 @@ class ListBarPopular extends StatefulWidget {
 
 class _ListBarState extends State<ListBarPopular> {
   final List<String> imageUrls = [
-    'assets/popular/1.jpg',
-    'assets/popular/2.jpg',
-    'assets/popular/3.jpg',
+    'assets/Popular/1.jpg',
+    'assets/Popular/2.jpg',
+    'assets/Popular/3.jpg',
   ];
 
   final List<String> textUrls = [

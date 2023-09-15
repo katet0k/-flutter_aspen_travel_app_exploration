@@ -47,7 +47,6 @@ flutter:
    - assets/icons/airline.svg
    - assets/icons/heart.svg
    - assets/icons/user.svg
-
-
-
+   - assets/recommended/11.jpg
+   - assets/recommended/22.jpg
 

@@ -14,8 +14,8 @@ class ListBarRecommended extends StatefulWidget {
 
 class _ListBarState extends State<ListBarRecommended> {
   final List<String> imageUrls = [
-    'assets/recommended/1.jpg',
-    'assets/recommended/2.jpg',
+    'assets/recommended/11.jpg',
+    'assets/recommended/22.jpg'
   ];
   final List<String> textUrls = [
     'Explore Aspen',
